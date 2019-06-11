@@ -1,0 +1,164 @@
+
+
+.alert {
+	padding: 20px;
+	color: white;
+}
+
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.closebtn:hover {
+	color: black;
+}
+
+.left {
+	margin-left: 12%;
+	padding-bottom: 3%;
+	width: 30%;
+	background: rgb(255, 255, 255, 20%);
+	float: left;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+.right {
+	margin-right: 12%;
+	;
+	background: rgb(255, 255, 255, 20%);
+	float: right;
+	width: 40%;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+
+input {
+	text-decoration: none;
+	text-align: center;
+	padding: 5px;
+	font-size: 20px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	display: center;
+	background: #fff;
+	border: 2px solid #C9D6DE;
+	color: #52616A;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input:hover {
+	background: #C9D6DE;
+	color: #fff;
+  }
+
+.content {
+	margin-top: 5%
+}
+
+#phead2 {
+	font-weight: bold;
+	font-size: 35px;
+}
+
+.pinfo {
+	font-size: 30px;
+}
+
+select:required:invalid {
+	color: white;
+}
+
+button {
+	text-decoration: none;
+	text-align: center;
+	padding: 5px;
+	font-size: 16px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	display: center;
+	background: #fff;
+	border: 2px solid Rgba(255,255,255,0.1);
+	color: #52616A;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background:Rgba(255,255,255,0.1);
+	color: #fff;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	width: 500px;
+	position: relative;
+	padding-left: 15px;
+	transition: all 1s ease-in-out;
+}
+
+.popup h2 {
+	margin-top: 0;
+	color: black;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup h1 {
+	margin-top: 0;
+	text-align: center;
+	color: black;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #06D85F;
+}
+
+.popup .content {
+	max-height: 30%;
+	overflow: auto;
+}

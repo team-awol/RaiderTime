@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Team AWOL</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../stylesheetmain.css">
+<style>
+	img:hover {
+	    -webkit-transform: scaleX(-1);
+	    transform: scaleX(-1);
+	}
+	
+	.button{
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+        background: none;
+        border: none;
+        font-size: 30px;
+		width: 100%;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+    
+    .button:hover{
+        color: #b8b894;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 500px;
+        position: relative;
+        padding-left: 15px;
+        transition: all 1s ease-in-out;
+    }
+    
+    .popup h2 {
+        margin-top: 0;
+        color: black;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    
+    .popup h1 {
+        margin-top: 0;
+        text-align: center;
+        color: black;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    
+    .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .popup .close:hover {
+        color: #06D85F;
+    }
+    
+    .popup .content {
+        max-height: 30%;
+        overflow: auto;
+    }
+    
+    .question-section{
+        margin: auto;
+    	position: center;
+    	width: 42%;
+    }
+    
+	/*Hide the paragraphs*/
+	.question-section p{
+		display: none;
+	}   
+
+	.question-section label+p{
+		display: block; 
+		color: black;
+		font-size: .85em;
+		font-weight: bold;
+		transition: all .15s ease-out;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;                       
+	}
+
+	.question-section input[type=checkbox]:checked~p{
+		display: block;
+		color: black;
+		font-size: 1em;
+		font-weight: bold;
+		/* restore clipping defaults */
+		text-overflow: clip; 
+		white-space: normal;
+		overflow: visible;  
+	}
+
+	.question-section label{
+		font-size: 1.2em;
+		display: block;
+		position: relative;
+		text-align: center;
+		height: 20px;
+		padding: 7px 10px;
+		font-weight: bold;
+		border: 1px solid #ddd;
+		border-left: 3px solid #888;
+		border-right: 3px solid #888;
+		text-shadow: 0 1px 0 rgba(255,255,255,.5);
+		transition: all .15s ease-out;          
+	}
+
+	.question-section label::selection{
+		background: none;
+	}
+
+
+	.question-section input[type=checkbox]:checked~label{
+		border-color:#40e0d0 ;          
+		box-shadow: 0 0 1px rgba(0,0,0,.4);             
+	}
+	
+	.question-section label::before{
+		content: '';
+		position: absolute;
+		right: 4px;
+		top: 50%;
+		margin-top: -6px;
+		border: 6px solid transparent;
+		border-left-color: inherit; 
+	}
+
+	
+	.question-section input[type=checkbox]:checked~label::before{
+		border: 6px solid transparent;
+		border-top-color: inherit;
+		margin-top: -3px;
+		right: 10px;    
+	}
+	.question-section input{
+		position: absolute; 
+		z-index: 2;
+		cursor: pointer;
+		opacity: 0;         
+		display: none\9; 
+		margin: 0;          
+		width: 42%;
+		height: 36px;
+	} 
+	.top {
+    	text-align: center;
+		margin: auto;
+    	position: static;
+    	font-size: 50px;
+	}
+</style>
+</head>
+
+<body>
+
+	<nav role="navigation">
+
+		<div id="menuToggle">
+
+			<input type="checkbox" />
+
+			<span></span>
+			<span></span>
+			<span></span>
+
+			<ul id="menu">
+                  <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
+                  <a href="http://ahsraidertime.com"><li>Home</li></a>
+                  <a href="http://ahsraidertime.com/about"><li>FAQ's</li></a>
+                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                </ul>
+
+		</div>
+	</nav>
+	<div class="top">
+		<p></p> Team AWOL
+	</div>
+	<div class="footer">
+		<p>Created by Team AWOL</p>
+	</div>
+
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Jake</label>
+		<p></p>
+
+		<p>Jake balls hard</p>
+		<p>Lead Backend</p>
+		<p><img src="jake.jpeg"><img src="jake1.jpeg" width="50%", height="50%"></p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Andy</label>
+		<p></p>
+		<p>OUR FEARLESS LEADER</p>
+		<p><img src="andy.jpeg" width="70%", height="70%"></p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Derek</label>
+		<p></p>
+		<p>Takes no days off</p>
+		<p>announcements, FAQ's, Communications guru</p>
+		<p><img src="derek.jpeg" width="40%", height="40%"><img src="derek1.jpeg" width="40%", height="40%"></p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Devin</label>
+		<p></p>
+		<p>Devin picked the fonts, made a breeze</p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Lauren</label>
+		<p></p>
+		<p>Teacher page, misc</p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Anna</label>
+		<p></p>
+		<p>Teacher page, misc</p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Sky</label>
+		<p></p>
+		<p>Admin Page</p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Greg</label>
+		<p></p>
+		<p><img src="greg.jpeg" width="70%", height="70%"></p>
+		<p>Admin Page</p>
+	</section>
+	<section class="question-section">
+		<input type="checkbox" id="q1">
+		<label for="q1">Zack</label>
+		<p></p>
+		<p>A little of this a little of that</p>
+	</section>
+	
+</body>
+
+</html>

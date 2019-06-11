@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<title>Overview</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+<div class="section1">
+<div class="headleft"><a href="http://ahs.hcpss.org/"><img src="atholtonhs.png" height="100px"></img></a></div><div class="headright"><a href="index.html">Atholton High School Raider Time Sign-Up</a></div>
+</div>
+<div class="section2"></div>
+<div class="section3"></div>
+<div class="center">
+<div class="bodyleft">
+<h1>Raider Time Overview</h1>
+<input class="searchbox" type="text" id="searchbox" onkeyup="updateSearch()" placeholder="Search..">
+<br>
+<div class="styled-select" id="styled-select">
+<select id="searchlist" onchange="display()" size="10">
+</select>
+</div>
+</div>
+<div class="bodyright">
+text
+</div>
+</div>
+<script>
+function updateSearch() {
+    var input = document.getElementById("searchbox");
+    var filter = input.value.toUpperCase();
+    var list = document.getElementById("searchlist");
+    var names = []; //get array of data from python
+    var count = 1;
+    
+    while(list.length>0){
+	list.remove(0);
+    }
+    if(filter!==""){
+    for (var i = 0; i < names.length; i++) {
+        var a = names[i].toUpperCase();
+	var b = a.indexOf(" ");
+	if (a.startsWith(filter)) {
+	    var option = document.createElement("option");
+	    option.text = names[i];
+	    list.add(option);
+	    count++;
+    	}
+	while(b>-1){
+            a=a.substring(b+1);
+	    if (a.startsWith(filter)) {
+		var option = document.createElement("option");
+		option.text = names[i];
+		list.add(option);
+		count++;
+            }
+	    b=a.indexOf(" ");
+	}
+    }
+    }
+    document.getElementById("styled-select").style.height = 15*count+"px";
+    document.getElementById("searchlist").style.height = 15*count+"px";
+}
+function display(){
+    var input = document.getElementById("searchbox");
+    var list = document.getElementById("searchlist");
+    if(list.value!=="select name"){
+      input.value = list.value;
+    }
+    while(list.length>0){
+	list.remove(0);
+    }
+    document.getElementById("styled-select").style.height = "15px";
+    document.getElementById("searchlist").style.height = "15px";
+    //get teacher's classroom data from python
+    //make info boxes + signup button visible
+}
+</script>
+</body>
+</html>
