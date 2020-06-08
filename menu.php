@@ -28,18 +28,18 @@ session_start();
    if ($result->num_rows > 0) {
        $row = $result->fetch_assoc();
        //$haveNumber = strcmp($row["NOTIFICATION"] ,"") != 0;
-       
+
 ?>
 
 <html>
-    
+
     <body>
         <nav role="navigation">
-  
+
 	        <div id="menuToggle">
 
 		    <input type="checkbox" />
-		
+
 		    <span></span>
 		    <span></span>
 		    <span></span>
@@ -49,15 +49,23 @@ session_start();
 		            <a href="http://ahsraidertime.com"><li>Home</li></a>
 		            <a href="http://ahsraidertime.com/about/"><li>FAQ'S</li></a>
 		            <a href="http://ahsraidertime.com/announcements/"><li>Announcements</li></a>
-                    <?php 
-                        $sql = "SELECT * FROM `administrators` WHERE `EMAIL` = '$email'";
-                        $results = $conn->query($sql);
-                        if($results->num_rows > 0) {
-                            echo "<a href=http://ahsraidertime.com/dummyStudentLogin.php><li>Test Account</li></a>";
+                    <?php
+                        $emldom = (strpos($email, "@") !== false)
+                            ? substr($email, strrpos($email, "@")) : "";
+                        if ((strcmp($emldom, "hcpss.org")
+                            || strcmp($emldom, "@inst.hcpss.org"))
+                            && ctype_alnum(substr($email, 0, strrpos($email, "@")))
+                        ) {
+                            // email is not a SQL injection
+                            $sql = "SELECT * FROM `administrators` WHERE `EMAIL` = '$email'";
+                            $results = $conn->query($sql);
+                            if($results->num_rows > 0) {
+                                echo "<a href=http://ahsraidertime.com/dummyStudentLogin.php><li>Test Account</li></a>";
+                            }
                         }
-                        ?>
+                    ?>
 		        </ul>
-	
+
 	        </div>
         </nav>
     </body>
