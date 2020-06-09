@@ -1,7 +1,12 @@
 <?php
 session_start();
 if ($_SESSION != null) {
-    if (strpos($_SESSION["email"], "inst.hcpss") !== false) {
+    if ((strpos($_SESSION["email"], "@") !== false)
+        && (substr(
+            $_SESSION["email"],
+            strrpos($_SESSION["email"], "@")
+        ) === "@inst.hcpss.org")
+    ) {
         // user is hcpss student
         header("LOCATION: http://ahsraidertime.com/student");
         exit();
@@ -37,7 +42,7 @@ if ($_SESSION != null) {
 }
 </style>
 </head>
-<!--_____________________________________________________________________________________________________________-->
+<!--_________________________________________________________________________-->
 
 <body>
 
@@ -48,7 +53,10 @@ if ($_SESSION != null) {
 	<script>
 		function onSignIn(googleUser) {
 			var profile = googleUser.getBasicProfile();
-			if (profile.getEmail().indexOf("hcpss.org") == -1) {
+      var eml = profile.getEmail();
+			if ((eml.indexOf("@") === -1)
+        || !["@hcpss.org", "@inst.hcpss.org"].includes(eml.substring(eml.lastIndexOf("@")))
+      ) {
 				var auth2 = gapi.auth2.getAuthInstance();
 				auth2.signOut();
 				window.alert("Only HCPSS google accounts allowed");
@@ -60,14 +68,14 @@ if ($_SESSION != null) {
 		}
 
 	</script>
-	<!--______________________________________________________________________________________________________-->
+	<!--_______________________________________________________________________-->
 	<div class="center">
       <p>Atholton Raider Time</p>
 		<div class="g-signin2" data-onsuccess="onSignIn" -theme="dark" data-width="190" data-height="70"></div>
   	</div>
-	
-  	
-      
+
+
+
 	  <?php include("menu.html");?>
 
 	<div class="footer">

@@ -20,7 +20,9 @@ error_reporting(E_ALL);
 function get_var($var)
 {
     $id = $_POST["id"]; // id from google
-    $id_token = file("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" . $id); // decrypted id
+    $id_token = file(
+      "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" . $id
+    ); // decrypted id
     foreach ($id_token as $part) {
         // part is a factor of the user such as name or email
         // remove unecessary charcters
@@ -57,16 +59,21 @@ if ($conn->connect_error) {
 // TODO check if id is expired
 
 
-if (strpos($email, 'hcpss.org') !== false) {
+$emldom = (strpos($email, "@") !== false)
+    ? substr($email, strrpos($email, "@")) : "";
+
+if ((strcmp($emldom, "@hcpss.org") === 0)
+    || (strcmp($emldom, "@inst.hcpss.org") === 0)
+) {
 	// user is hcpss
     session_start();
     $_SESSION["name"] = preg_replace('/[^A-Za-z0-9\- ]/', '', $name);
     $_SESSION["email"] = $email;
     // $_SESSION["exp"] = $exp; // when to auto logout
     // $_SESSION["img"] = $img_url;
-	
-	
-    if (strpos($email, '@inst.hcpss.org') !== false) {
+
+
+    if (strcmp($emldom, "@inst.hcpss.org") === 0) {
         // user is student
         // get firstname and lastname
         $_SESSION["fname"] = preg_replace('/[^A-Za-z0-9\- ]/', '', trim(get_var("given_name")));
@@ -76,9 +83,9 @@ if (strpos($email, 'hcpss.org') !== false) {
 
 		echo $_SESSION["name"];
 		echo phpinfo();
-		session_write_close(); session_regenerate_id(true); 
-		
-		
+		session_write_close(); session_regenerate_id(true);
+
+
 		exit();
     } else {
         // user is not student
@@ -95,7 +102,7 @@ if (strpos($email, 'hcpss.org') !== false) {
         if (in_array($name, $administrators)) {
             header("LOCATION: http://ahsraidertime.com/administrator/");
             exit();
-        } elseif (strpos($email, '@hcpss.org') !== false) {
+        } elseif (strcmp($emldom, "hcpss.org") === 0) {
             // teacher
             header("LOCATION: http://ahsraidertime.com/teacher/");
             exit();
