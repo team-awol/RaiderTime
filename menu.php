@@ -52,9 +52,11 @@ session_start();
                     <?php
                         $emldom = (strpos($email, "@") !== false)
                             ? substr($email, strrpos($email, "@")) : "";
+	                $allowed = array(".", "-", "_");
+	                $emlloc = substr($email, 0, strrpos($email, "@"));
                         if ((strcmp($emldom, "hcpss.org")
                             || strcmp($emldom, "@inst.hcpss.org"))
-                            && ctype_alnum(substr($email, 0, strrpos($email, "@")))
+                            && ctype_alnum(str_replace($allowed, "", $emlloc))
                         ) {
                             // email is not a SQL injection
                             $sql = "SELECT * FROM `administrators` WHERE `EMAIL` = '$email'";
