@@ -11,7 +11,7 @@
 
 <?php
 if (strcmp( date("Y-m-d", time()), $next_raidertime) == 0) {
-	echo "<script>alert(\"It is too late to remove a student this week! \");window.location.assign(\"https://atholtonraidertime.com/teacher\");</script>";
+	echo "<script>alert(\"It is too late to remove a student this week! \");window.location.assign(\"https://ahsraidertime.org/teacher\");</script>";
 	exit();
 }
 
@@ -21,7 +21,7 @@ $student = $_GET["student"];
 $teacher = $_SESSION["teacher"];
 
 // connect to database
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -31,7 +31,7 @@ if ($conn->connect_error) {
     $to = 'atholtonads@gmail.com';
     $subject = 'ERROR PAGE: removeStudent.php';
     $message = 'connection error';
-    $headers = 'From: error@atholtonraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers);
 }
 
@@ -43,7 +43,7 @@ while ($row = $result->fetch_assoc()) {
     if ($row["TEACHER"] != $teacher) {
         $subject = 'ERROR PAGE: removeStudent.php';
         $message = 'Call to remove student, but student is not signed up for teacher';
-        $headers = 'From: error@atholtonraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
         mail($to, $subject, $message, $headers);
     }
     $student_email = $row["NOTIFICATION"];
@@ -64,7 +64,7 @@ if ($conn->query($sql) === true) {
     $to = 'atholtonads@gmail.com';
     $subject = 'ERROR PAGE: removeStudent.php';
     $message = 'removal error';
-    $headers = 'From: error@atholtonraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers);
 }
 

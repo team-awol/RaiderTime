@@ -2,11 +2,11 @@
     session_start();
 
     if ($_SESSION == null) {
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     }
     
-    $servername = "ahsraidertime.com";
+    $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -18,7 +18,7 @@
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
     //    mail($to, $subject, $message, $headers);
     }
@@ -29,12 +29,12 @@
         //echo "<p>ERROR UNKNOWN TEACHER ". $name . " </p>";
         //echo "<p>Please contact atholtonADS@gmail.com</p>";
         //echo "</div>\n</div>\n</body>\n</html>";
-        header("LOCATION: http://ahsraidertime.com/student");
+        header("LOCATION: http://ahsraidertime.org/student");
         exit();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'name: ' . $name;
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
        // mail($to, $subject, $message, $headers);
     
      include "../nextRaiderTime.php";
@@ -69,9 +69,9 @@
 
                 <ul id="menu">
                   <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-                  <a href="http://ahsraidertime.com"><li>Home</li></a>
-                  <a href="http://ahsraidertime.com/about"><li>FAQ's</li></a>
-                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                  <a href="http://ahsraidertime.org"><li>Home</li></a>
+                  <a href="http://ahsraidertime.org/about"><li>FAQ's</li></a>
+                  <a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
                 </ul>
             
             </div>
@@ -82,14 +82,14 @@
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function() {
-                window.location.replace("http://ahsraidertime.com/logout.php");
+                window.location.replace("http://ahsraidertime.org/logout.php");
             });
         }
     </script>
         <div class="g-signin2" data-onsuccess="onSignIn" style="display: none;"></div>
         <div class="body">
              <?php
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -101,7 +101,7 @@ $servername = "ahsraidertime.com";
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
     //    mail($to, $subject, $message, $headers);
     }
@@ -119,12 +119,12 @@ $servername = "ahsraidertime.com";
         //echo "<p>ERROR UNKNOWN TEACHER ". $name . " </p>";
         //echo "<p>Please contact atholtonADS@gmail.com</p>";
         //echo "</div>\n</div>\n</body>\n</html>";
-        header("LOCATION: http://ahsraidertime.com/student");
+        header("LOCATION: http://ahsraidertime.org/student");
         exit();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'name: ' . $name;
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
        // mail($to, $subject, $message, $headers);
     } else {
         $row = $result->fetch_assoc();
@@ -157,7 +157,7 @@ $servername = "ahsraidertime.com";
                 function signOut() {
                     var auth2 = gapi.auth2.getAuthInstance();
                     auth2.signOut().then(function() {
-                        window.location.replace("http://ahsraidertime.com/");
+                        window.location.replace("http://ahsraidertime.org/");
                     });
                 }
             </script>

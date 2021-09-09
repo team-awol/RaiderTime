@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    $servername = "ahsraidertime.com";
+    $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -12,7 +12,7 @@
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: announcements index';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
@@ -149,7 +149,7 @@ section {
                                 $to      = 'atholtonads@gmail.com';
                                 $subject = 'ERROR PAGE: main index';
                                 $message = 'update announcements error';
-                                $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+                                $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
                                 mail($to, $subject, $message, $headers);

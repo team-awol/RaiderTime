@@ -29,7 +29,7 @@
 $name = $_SESSION["name"]; // teacher id
 $ID = $_GET["ID"]; // announcement id
 
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -41,7 +41,7 @@ if ($conn->connect_error) {
     $to      = 'atholtonads@gmail.com';
     $subject = 'ERROR PAGE: edit announcement';
     $message = 'connection error';
-    $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+    $headers = 'From: error@ahsraidertime.org' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers);
 }
@@ -70,7 +70,7 @@ if ($ID != null) {
                 <input type="submit" id="button1" class="button" value="Save announcement">
             </form>
 
-			<input id='button1' type='button' class='button' value='Delete Announcement' onclick="window.location.replace('http://ahsraidertime.com/teacher/deleteAnnouncement.php?<?php echo 'ID=' . $ID; ?>')">
+			<input id='button1' type='button' class='button' value='Delete Announcement' onclick="window.location.replace('http://ahsraidertime.org/teacher/deleteAnnouncement.php?<?php echo 'ID=' . $ID; ?>')">
 			</center>
 			<?php
         } else {

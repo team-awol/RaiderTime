@@ -2,7 +2,7 @@
 
 session_start();
 
-    $servername = "ahsraidertime.com";
+    $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -14,7 +14,7 @@ session_start();
     } else {
     }
     if ($_SESSION == null) {
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     } else {
     }
@@ -46,9 +46,9 @@ session_start();
 
 		        <ul id="menu">
 		            <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-		            <a href="http://ahsraidertime.com"><li>Home</li></a>
-		            <a href="http://ahsraidertime.com/about/"><li>FAQ'S</li></a>
-		            <a href="http://ahsraidertime.com/announcements/"><li>Announcements</li></a>
+		            <a href="http://ahsraidertime.org"><li>Home</li></a>
+		            <a href="http://ahsraidertime.org/about/"><li>FAQ'S</li></a>
+		            <a href="http://ahsraidertime.org/announcements/"><li>Announcements</li></a>
                     <?php
                         $emldom = (strpos($email, "@") !== false)
                             ? substr($email, strrpos($email, "@")) : "";
@@ -62,7 +62,7 @@ session_start();
                             $sql = "SELECT * FROM `administrators` WHERE `EMAIL` = '$email'";
                             $results = $conn->query($sql);
                             if($results->num_rows > 0) {
-                                echo "<a href=http://ahsraidertime.com/dummyStudentLogin.php><li>Test Account</li></a>";
+                                echo "<a href=http://ahsraidertime.org/dummyStudentLogin.php><li>Test Account</li></a>";
                             }
                         }
                     ?>

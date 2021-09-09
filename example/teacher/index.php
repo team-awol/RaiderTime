@@ -4,7 +4,7 @@ $next_raidertime = get_next();
     session_start();
 
     if ($_SESSION == null) {
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     }
 ?>
@@ -37,9 +37,9 @@ $next_raidertime = get_next();
 
                 <ul id="menu">
                   <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-                  <a href="http://ahsraidertime.com"><li>Home</li></a>
-                  <a href="http://ahsraidertime.com/about"><li>FAQ's</li></a>
-                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                  <a href="http://ahsraidertime.org"><li>Home</li></a>
+                  <a href="http://ahsraidertime.org/about"><li>FAQ's</li></a>
+                  <a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
                 </ul>
             
             </div>
@@ -59,7 +59,7 @@ $next_raidertime = get_next();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
         mail($to, $subject, $message, $headers);
     }
@@ -82,7 +82,7 @@ $next_raidertime = get_next();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'name: ' . $name;
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
         mail($to, $subject, $message, $headers);
     } else {
         $row = $result->fetch_assoc();
@@ -97,7 +97,7 @@ $next_raidertime = get_next();
                     gapi.load('auth2', function() {
                         gapi.auth2.init().then(function() {
                             if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
-                                //window.location.replace("http://ahsraidertime.com/");
+                                //window.location.replace("http://ahsraidertime.org/");
                             }
                         });
                     });
@@ -111,19 +111,19 @@ $next_raidertime = get_next();
                     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
                     if (profile == null || profile.getEmail() == null || profile.getName() !== "<?php echo $name ?>" || profile.getEmail().indexOf("hcpss.org") == -1 || profile.getEmail().indexOf("inst") !== -1) {
                         //if not signed in, or student account, not hcpss account or not the name of person in url
-                        // window.location.replace("http://ahsraidertime.com/");
+                        // window.location.replace("http://ahsraidertime.org/");
                     }
                 }
 
                 function signOut() {
                     var auth2 = gapi.auth2.getAuthInstance();
                     auth2.signOut().then(function() {
-                        window.location.replace("http://ahsraidertime.com/");
+                        window.location.replace("http://ahsraidertime.org/");
                     });
                 }
                 
             function redirect() {
-                window.location.replace("http://ahsraidertime.com/teacher/?name=<?php echo $name?>");
+                window.location.replace("http://ahsraidertime.org/teacher/?name=<?php echo $name?>");
                 return false;
                 }
             </script>

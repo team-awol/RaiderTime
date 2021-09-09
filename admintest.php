@@ -3,7 +3,7 @@ $next_raidertime = get_next();
     session_start();
 	if (strcmp($_SESSION["name"], "Gregory Ho") != 0 && strcmp($_SESSION["name"], "Sky Cen") != 0 && strcmp($_SESSION["email"], "wrichm6130@inst.hcpss.org") != 0) {
 	    // user is not administrator
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     }
 
@@ -40,9 +40,9 @@ $next_raidertime = get_next();
 
                 <ul id="menu">
                   <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-                  <a href="http://ahsraidertime.com"><li>Home</li></a>
-                  <a href="http://ahsraidertime.com/about"><li>FAQ's</li></a>
-                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                  <a href="http://ahsraidertime.org"><li>Home</li></a>
+                  <a href="http://ahsraidertime.org/about"><li>FAQ's</li></a>
+                  <a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
                 </ul>
             
             </div>
@@ -55,7 +55,7 @@ $next_raidertime = get_next();
 <a href='printClasses.php' target='_blank'><button>Print Classes</button></a>
 <br>
     <?php
-        $servername = "ahsraidertime.com";
+        $servername = "ahsraidertime.org";
         $username = "ahsraide_editing";
         $password = "cashmoney420";
         $database = "ahsraide_db734576708";
@@ -67,7 +67,7 @@ $next_raidertime = get_next();
             $to      = 'atholtonads@gmail.com';
             $subject = 'ERROR PAGE: teacher index';
             $message = 'connection error';
-            $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+            $headers = 'From: error@ahsraidertime.org' . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
             mail($to, $subject, $message, $headers);
         }
@@ -105,7 +105,7 @@ $next_raidertime = get_next();
                             $to      = 'atholtonads@gmail.com';
                             $subject = 'ERROR PAGE: teacher index';
                             $message = 'connection error';
-                            $headers = 'From: error@ahsraidertime.com';
+                            $headers = 'From: error@ahsraidertime.org';
                             mail($to, $subject, $message, $headers);
                         }
                         $name = trim($_SESSION["name"]);

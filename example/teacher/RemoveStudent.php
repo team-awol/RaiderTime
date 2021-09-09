@@ -24,7 +24,7 @@ session_start();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: removeStudent.php';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
         mail($to, $subject, $message, $headers);
     }
     
@@ -37,7 +37,7 @@ session_start();
         if ($row["TEACHER"] != $teacher) {
             $subject = 'ERROR PAGE: removeStudent.php';
             $message = 'Call to remove student, but student is not signed up for teacher';
-            $headers = 'From: error@ahsraidertime.com' . "\r\n" .'X-Mailer: PHP/' . phpversion();
+            $headers = 'From: error@ahsraidertime.org' . "\r\n" .'X-Mailer: PHP/' . phpversion();
             mail($to, $subject, $message, $headers);
 		}
 		$student_email = $row["NOTIFICATION"];
@@ -56,7 +56,7 @@ if ($conn->query($sql) === true) {
     $to      = 'atholtonads@gmail.com';
     $subject = 'ERROR PAGE: removeStudent.php';
     $message = 'removal error';
-    $headers = 'From: error@ahsraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers);
 }
 

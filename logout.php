@@ -9,6 +9,6 @@ $_SESSION = array();
 session_destroy();
 
 // redirect to home page
-header("LOCATION: http://ahsraidertime.com");
+header("LOCATION: http://ahsraidertime.org");
 exit();
 ?>

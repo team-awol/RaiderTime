@@ -28,7 +28,7 @@ include "../nextRaiderTime.php";
 $name = $_SESSION["name"]; // admin id
 $ID = $_GET["ID"]; // announcement id
 
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -40,7 +40,7 @@ if ($conn->connect_error) {
     $to      = 'atholtonads@gmail.com';
     $subject = 'ERROR PAGE: edit announcement';
     $message = 'connection error';
-    $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+    $headers = 'From: error@ahsraidertime.org' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers);
 }

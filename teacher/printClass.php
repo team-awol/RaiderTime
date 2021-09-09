@@ -4,7 +4,7 @@ session_start();
 $next_raidertime = get_next();
     if ($_SESSION == null) {
         echo "null session";
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     }
 
@@ -32,7 +32,7 @@ $next_raidertime = get_next();
 <h1>Raider Time Roster for <?php echo $name . " " ; echo $next_raidertime; ?></h1>
 <pre>
 <?php
-    $servername = "ahsraidertime.com";
+    $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -44,7 +44,7 @@ $next_raidertime = get_next();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com';
+        $headers = 'From: error@ahsraidertime.org';
         mail($to, $subject, $message, $headers);
     }
 

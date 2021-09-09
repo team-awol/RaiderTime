@@ -22,7 +22,7 @@ $emails = array(
 );
 
 if (isset($_GET['number']) and isset($_GET["carrier"])) {
-    $servername = "ahsraidertime.com";
+    $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -82,9 +82,9 @@ if (isset($_GET['number']) and isset($_GET["carrier"])) {
     
                 <ul id="menu">
                   <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-                  <a href="http://ahsraidertime.com"><li>Home</li></a>
-                  <a href="http://ahsraidertime.com/about"><li>FAQ'S</li></a>
-                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                  <a href="http://ahsraidertime.org"><li>Home</li></a>
+                  <a href="http://ahsraidertime.org/about"><li>FAQ'S</li></a>
+                  <a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
                 </ul>
             </div>
         </nav>
@@ -170,7 +170,7 @@ if (isset($_GET['number']) and isset($_GET["carrier"])) {
 </div>
         <div class="bigdiv" style="text-align: center;">
         <p style="font-size: 50px; text-align: center;">Contact Information</p>
-        <p style="text-align: center;">Please enter your cell phone number and cellular carrier to get alerts from ahsraidertime.com</p>
+        <p style="text-align: center;">Please enter your cell phone number and cellular carrier to get alerts from ahsraidertime.org</p>
         <br>
 
         <p style="text-align: center; font-size: 35px;">Phone Number</p>

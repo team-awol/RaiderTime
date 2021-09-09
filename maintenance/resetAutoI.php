@@ -11,7 +11,7 @@
 	 $to      = 'atholtonads@gmail.com';
 	 $subject = 'ERROR PAGE: teacher index';
 	 $message = 'connection error';
-	 $headers = 'From: error@ahsraidertime.com';
+	 $headers = 'From: error@ahsraidertime.org';
 	 mail($to, $subject, $message, $headers);
  }
 $sql = "ALTER TABLE students AUTO_INCREMENT = 1";

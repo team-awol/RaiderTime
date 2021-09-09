@@ -13,7 +13,7 @@ session_start();
         die("Connection failed: " . $conn->connect_error);
         $subject = 'ERROR PAGE:  update student sign up';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
         mail($to, $subject, $message, $headers);
     }
 

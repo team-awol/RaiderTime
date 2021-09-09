@@ -14,7 +14,7 @@ $next_raidertime = get_next();
     }
     
     if ($_SESSION == null) {
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     }
     //$haveNumber = false;
@@ -76,9 +76,9 @@ $next_raidertime = get_next();
     
                 <ul id="menu">
                   <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-                  <a href="http://ahsraidertime.com"><li>Home</li></a>
-                  <a href="http://ahsraidertime.com/about"><li>FAQ'S</li></a>
-                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                  <a href="http://ahsraidertime.org"><li>Home</li></a>
+                  <a href="http://ahsraidertime.org/about"><li>FAQ'S</li></a>
+                  <a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
                 </ul>
         </nav>
   <div class="snowflakes" aria-hidden="true">
@@ -168,7 +168,7 @@ $next_raidertime = get_next();
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
     			auth2.signOut().then(function () {
-                window.location.replace("http://ahsraidertime.com/logout.php");
+                window.location.replace("http://ahsraidertime.org/logout.php");
             });
         }
     </script>
@@ -260,7 +260,7 @@ $next_raidertime = get_next();
 </html>
 
 <?php } else {  
-	echo "	<script> alert(\"We do not have a record of your account! If this is an error please email atholtonads@gmail.com\");                window.location.replace(\"http://ahsraidertime.com/logout.php\");
+	echo "	<script> alert(\"We do not have a record of your account! If this is an error please email atholtonads@gmail.com\");                window.location.replace(\"http://ahsraidertime.org/logout.php\");
 	</script>";
 	
     }

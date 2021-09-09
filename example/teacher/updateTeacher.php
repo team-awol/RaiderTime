@@ -15,7 +15,7 @@ session_start();
         $to      = 'atholtonads@gmail.com';
 $subject = 'ERROR PAGE: update teacher';
 $message = 'connection error';
-$headers = 'From: error@ahsraidertime.com' . "\r\n" .
+$headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($to, $subject, $message, $headers);
@@ -39,5 +39,5 @@ $sql = "UPDATE teachers SET ROOM_NUMBER='$room', MAX_STUDENTS='$max', DETAILS='$
 if ($conn->query($sql) === TRUE) {} else {}
 
 $conn->close();
-echo "<script>window.location.replace('http://ahsraidertime.com/teacher/?name=".$name."');</script>";
+echo "<script>window.location.replace('http://ahsraidertime.org/teacher/?name=".$name."');</script>";
 ?>

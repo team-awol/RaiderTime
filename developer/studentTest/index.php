@@ -4,7 +4,7 @@ session_start();
 
  include "../nextRaiderTime.php";
 $next_raidertime = get_next();
-      $servername = "ahsraidertime.com";
+      $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -16,7 +16,7 @@ $next_raidertime = get_next();
     } else {
     }
     if ($_SESSION == null) {
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     } else {
     }
@@ -66,22 +66,22 @@ $next_raidertime = get_next();
         function signOut() {
     		var auth2 = gapi.auth2.getAuthInstance();
 			if (auth2 == null){
-                window.location.replace("http://ahsraidertime.com/logout.php");
+                window.location.replace("http://ahsraidertime.org/logout.php");
             }
     auth2.signOut().then(function () {
-            window.location.replace("http://ahsraidertime.com/logout.php");
+            window.location.replace("http://ahsraidertime.org/logout.php");
             });
         }
         
         function goAdmin() {
-            window.location.replace("http://ahsraidertime.com/administrator");
+            window.location.replace("http://ahsraidertime.org/administrator");
         }
         
         function goAddDevelopers() {
-            window.location.replace("http://ahsraidertime.com/administrator/addDevelopers.php");
+            window.location.replace("http://ahsraidertime.org/administrator/addDevelopers.php");
         }
         function goTesting() {
-            window.location.replace("http://ahsraidertime.com/administrator/studentTest");
+            window.location.replace("http://ahsraidertime.org/administrator/studentTest");
         }
     </script>
         <div class="body">
@@ -198,7 +198,7 @@ $next_raidertime = get_next();
 
 <?php
    } else {
-       echo "	<script> alert(\"We do not have a record of your account! If this is an error please email atholtonads@gmail.com\");                window.location.replace(\"http://ahsraidertime.com/logout.php\");
+       echo "	<script> alert(\"We do not have a record of your account! If this is an error please email atholtonads@gmail.com\");                window.location.replace(\"http://ahsraidertime.org/logout.php\");
 	</script>";
    }
     $conn->close();

@@ -1,6 +1,6 @@
 <?php
 session_start();
-  $servername = "ahsraidertime.com";
+  $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -12,7 +12,7 @@ session_start();
     } else {
     }
     if ($_SESSION == null) {
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     } else {
     }

@@ -2,7 +2,7 @@
 session_start();
 
 // todo open in new tab then close tab
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -14,7 +14,7 @@ $servername = "ahsraidertime.com";
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: update teacher';
         $message = 'connection error';
-        $headers = 'From: error@atholtonraidertime.com' . "\r\n" .
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
@@ -41,4 +41,4 @@ $room = $_POST['room'];
 	}
 
 $conn->close();
-echo "<script>window.location.replace('http://ahsraidertime.com/teacher/?name=".$name."');</script>";
+echo "<script>window.location.replace('http://ahsraidertime.org/teacher/?name=".$name."');</script>";

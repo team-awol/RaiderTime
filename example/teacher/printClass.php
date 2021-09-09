@@ -4,7 +4,7 @@ $next_raidertime = get_next();
 session_start();
     if ($_SESSION == null) {
         echo "null session";
-        header("LOCATION: http://atholtonraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
     }
 
@@ -44,7 +44,7 @@ session_start();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'connection error';
-        $headers = 'From: error@atholtonraidertime.com';
+        $headers = 'From: error@ahsraidertime.org';
         mail($to, $subject, $message, $headers);
     }
     $sql = "SELECT NAME FROM students WHERE `$next_raidertime` = '$name'";

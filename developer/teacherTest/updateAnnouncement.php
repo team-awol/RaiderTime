@@ -6,7 +6,7 @@ $name = $_SESSION["name"];
 include "../nextRaiderTime.php";
 $next_raidertime = get_next();
 
-    $servername = "ahsraidertime.com";
+    $servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -18,7 +18,7 @@ $next_raidertime = get_next();
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE:  update announcement';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
@@ -49,4 +49,4 @@ while ($row = $result->fetch_assoc()) {
 }
 */
 
-echo "<script>window.location.replace('http://ahsraidertime.com/teacher');</script>";
+echo "<script>window.location.replace('http://ahsraidertime.org/teacher');</script>";

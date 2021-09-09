@@ -8,7 +8,7 @@ if ($_SESSION != null) {
         ) === "@inst.hcpss.org")
     ) {
         // user is hcpss student
-        header("LOCATION: http://ahsraidertime.com/student");
+        header("LOCATION: http://ahsraidertime.org/student");
         exit();
     }
 }

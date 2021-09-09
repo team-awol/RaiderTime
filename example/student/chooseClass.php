@@ -36,9 +36,9 @@ $sName = $_SESSION["name"];
     
                 <ul id="menu">
                   <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-                  <a href="http://ahsraidertime.com"><li>Home</li></a>
-                  <a href="http://ahsraidertime.com/about"><li>FAQ'S</li></a>
-                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                  <a href="http://ahsraidertime.org"><li>Home</li></a>
+                  <a href="http://ahsraidertime.org/about"><li>FAQ'S</li></a>
+                  <a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
                 </ul>
             </div>
         </nav>
@@ -183,7 +183,7 @@ $sName = $_SESSION["name"];
         }
 
         function signUp() {
-            window.location.replace('http://ahsraidertime.com/student/updateSignUp.php?<?php echo 'teacher=' . $tName;?>');
+            window.location.replace('http://ahsraidertime.org/student/updateSignUp.php?<?php echo 'teacher=' . $tName;?>');
         }
 
     </script>

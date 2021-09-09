@@ -7,7 +7,7 @@ include "../nextRaiderTime.php";
 $next_raidertime = get_next();
 
 // connect to database
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     $subject = 'ERROR PAGE:  update student sign up';
     $message = 'connection error';
-    $headers = 'From: error@ahsraidertime.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $headers = 'From: error@ahsraidertime.org' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers);
 }
 

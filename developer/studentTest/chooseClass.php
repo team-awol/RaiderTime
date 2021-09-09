@@ -5,7 +5,7 @@ session_start();
 $tName = $_GET["teacher"]; // teacher name (if selected)
 $sName = $_SESSION["name"]; // student name
                             // connect to database
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -15,7 +15,7 @@ if (! $conn) {
 }
 // time() is a timezone over so no sign up after 9 (9:00 EST)
 if (strcmp( date("Y-m-d", time()), $next_raidertime) == 0 && time() >= strtotime("8:00:00")) {
-	echo "<script>alert(\"It is too late to sign up for raidertime this week! \");window.location.assign(\"https://ahsraidertime.com/student\");</script>";
+	echo "<script>alert(\"It is too late to sign up for raidertime this week! \");window.location.assign(\"https://ahsraidertime.org/student\");</script>";
   }
 ?>
 <!DOCTYPE html>
@@ -44,9 +44,9 @@ if (strcmp( date("Y-m-d", time()), $next_raidertime) == 0 && time() >= strtotime
 			<ul id="menu">
 				<a href="http://ahs.hcpss.org/"><li><img src="ahslogo.png"
 						alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-				<a href="http://ahsraidertime.com"><li>Home</li></a>
-				<a href="http://ahsraidertime.com/about"><li>FAQ'S</li></a>
-				<a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+				<a href="http://ahsraidertime.org"><li>Home</li></a>
+				<a href="http://ahsraidertime.org/about"><li>FAQ'S</li></a>
+				<a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
 			</ul>
 		</div>
 	</nav>
@@ -221,7 +221,7 @@ if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|
         }
 
         function signUp() {
-            window.location.replace('http://ahsraidertime.com/developer/studentTest/updateSignUp.php?<?php echo 'teacher=' . $tName;?>');
+            window.location.replace('http://ahsraidertime.org/developer/studentTest/updateSignUp.php?<?php echo 'teacher=' . $tName;?>');
         }
 
     </script>

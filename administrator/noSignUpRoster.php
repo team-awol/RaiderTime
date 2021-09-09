@@ -1,11 +1,11 @@
 <?php  
 session_start();
 if ($_SESSION == null) {
-	header("LOCATION: http://ahsraidertime.com");
+	header("LOCATION: http://ahsraidertime.org");
 	exit();
 }
 
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 	$to      = 'atholtonads@gmail.com';
 	$subject = 'ERROR PAGE: login';
 	$message = 'connection error';
-	$headers = 'From: error@ahsraidertime.com';
+	$headers = 'From: error@ahsraidertime.org';
 	mail($to, $subject, $message, $headers);
 }
 $sql = "SELECT NAME FROM administrators";
@@ -29,7 +29,7 @@ while ($row = $result->fetch_assoc()) {
 
 // determine if admin or teacher
 if (!in_array($_SESSION["name"], $administrators)) {
-	header("LOCATION: http://ahsraidertime.com/");
+	header("LOCATION: http://ahsraidertime.org/");
 	exit();
 }
 $next_raidertime; 

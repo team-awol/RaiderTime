@@ -4,11 +4,11 @@ error_reporting(E_ALL);
     session_start();
 
     if ($_SESSION == null) {
-        header("LOCATION: http://ahsraidertime.com");
+        header("LOCATION: http://ahsraidertime.org");
         exit();
 	}
     //Motley was here
-	$servername = "ahsraidertime.com";
+	$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -20,7 +20,7 @@ error_reporting(E_ALL);
 		$to      = 'atholtonads@gmail.com';
 		$subject = 'ERROR PAGE: login';
 		$message = 'connection error';
-		$headers = 'From: error@ahsraidertime.com';
+		$headers = 'From: error@ahsraidertime.org';
 		mail($to, $subject, $message, $headers);
 	}
 	$sql = "SELECT `NAME` FROM `administrators`";
@@ -33,7 +33,7 @@ error_reporting(E_ALL);
 	$previous_week = false;
 	// determine if admin or teacher
 	if (!(in_array($_SESSION["name"], $administrators))) {
-        header('LOCATION: http://ahsraidertime.com/student');
+        header('LOCATION: http://ahsraidertime.org/student');
         exit();
 	}
 	include "../nextRaiderTime.php";
@@ -75,9 +75,9 @@ error_reporting(E_ALL);
 
                 <ul id="menu">
                   <a href="http://ahs.hcpss.org/"><li><img src ="ahslogo.png" alt="logo" width="100" height="100" style="margin-left: -17px"></li></a>
-                  <a href="http://ahsraidertime.com"><li>Home</li></a>
-                  <a href="http://ahsraidertime.com/about"><li>FAQ's</li></a>
-                  <a href="http://ahsraidertime.com/announcements"><li>Announcements</li></a>
+                  <a href="http://ahsraidertime.org"><li>Home</li></a>
+                  <a href="http://ahsraidertime.org/about"><li>FAQ's</li></a>
+                  <a href="http://ahsraidertime.org/announcements"><li>Announcements</li></a>
                 </ul>
             
             </div>
@@ -88,11 +88,11 @@ error_reporting(E_ALL);
 		<a href='printStudents.php?week=<?php echo $next_raidertime;?>' target='_blank'><button>Print Roster</button></a>
 <a href='printClasses.php?week=<?php echo $next_raidertime;?>' target='_blank'><button>Print Classes</button></a>
 <a href='noSignUpRoster.php?week=<?php echo $next_raidertime;?>' target='_blank'><button>Print Students who have not signed up	</button></a>
-<a href='http://ahsraidertime.com/teacher'><button>Edit Classroom</button></a>
-<a href='http://ahsraidertime.com/goTesting'><button>Go to Testing Page</button></a>
+<a href='http://ahsraidertime.org/teacher'><button>Edit Classroom</button></a>
+<a href='http://ahsraidertime.org/goTesting'><button>Go to Testing Page</button></a>
 
 <?php if ($previous_week) {
-	echo "<a href='http://ahsraidertime.com/administrator'><button>Return to current week</button></a>";
+	echo "<a href='http://ahsraidertime.org/administrator'><button>Return to current week</button></a>";
 }?>
 
 <br>
@@ -104,7 +104,7 @@ error_reporting(E_ALL);
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com' . "\r\n" .
+        $headers = 'From: error@ahsraidertime.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
         mail($to, $subject, $message, $headers);
     }
@@ -134,7 +134,7 @@ error_reporting(E_ALL);
         $to      = 'atholtonads@gmail.com';
         $subject = 'ERROR PAGE: teacher index';
         $message = 'connection error';
-        $headers = 'From: error@ahsraidertime.com';
+        $headers = 'From: error@ahsraidertime.org';
         mail($to, $subject, $message, $headers);
     }
     $name = trim($_SESSION["name"]);

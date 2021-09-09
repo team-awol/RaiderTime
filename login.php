@@ -42,7 +42,7 @@ $name = trim(get_var("name"));
 $email = trim(get_var("email"));
 
 // connect to database
-$servername = "ahsraidertime.com";
+$servername = "ahsraidertime.org";
     $username = "ahsraide_editing";
     $password = "cashmoney420";
     $database = "ahsraide_db734576708";
@@ -52,7 +52,7 @@ if ($conn->connect_error) {
     $to = 'atholtonads@gmail.com';
     $subject = 'ERROR PAGE: login';
     $message = 'connection error';
-    $headers = 'From: error@ahsraidertime.com';
+    $headers = 'From: error@ahsraidertime.org';
     mail($to, $subject, $message, $headers);
 }
 
@@ -100,15 +100,15 @@ if ((strcmp($emldom, "@hcpss.org") === 0)
 
         // determine if admin or teacher
         if (in_array($name, $administrators)) {
-            header("LOCATION: http://ahsraidertime.com/administrator/");
+            header("LOCATION: http://ahsraidertime.org/administrator/");
             exit();
         } elseif (strcmp($emldom, "hcpss.org") === 0) {
             // teacher
-            header("LOCATION: http://ahsraidertime.com/teacher/");
+            header("LOCATION: http://ahsraidertime.org/teacher/");
             exit();
         }
     }
 }
 // if user has not been identified or other error, just redirect to home page
-header("LOCATION: http://ahsraidertime.com");
+header("LOCATION: http://ahsraidertime.org");
 ?>
